@@ -1,0 +1,58 @@
+<h2> Take a visit</h2>
+<p> Our adress </p>
+
+<form action="/visit" method="POST">
+  <div class="form-group">
+    <label>Your name</label>
+    <input name="username" type="text" class="form-control" placeholder="Your name" value="<%= @user %>">
+  </div>
+
+    <div class="form-group">
+    <label>Phone</label>
+    <input name="phone" type="text" class="form-control" placeholder="Phone" value="<%= @phone %>">
+    </div>
+
+    <div class="form-group">
+    <label>When will you go?</label>
+    <input name="dt" type="text" class="form-control" placeholder="Date-Time" value="<%= @datetime %>">
+    </div>
+
+    <div class="form-group">
+    <label>Choose your barber</label> 
+    <select name="barber" class="form-control">
+    <option>Gus Fring</option>
+    <option>Walter White</option>
+    <option>Jessie Pinkman</option>
+    </select> 
+    <div>
+
+    <div class="form-group">
+    <label>Choose your colour:</label>
+    </div>
+    <div class="form-group">
+    <select id="color" name="color">
+      <option value="#7bd148">Green</option>
+      <option value="#5484ed">Bold blue</option>
+      <option value="#a4bdfc">Blue</option>
+      <option value="#46d6db">Turquoise</option>
+      <option value="#7ae7bf">Light green</option>
+      <option value="#51b749">Bold green</option>
+      <option value="#fbd75b">Yellow</option>
+      <option value="#ffb878">Orange</option>
+      <option value="#ff887c">Red</option>
+      <option value="#dc2127">Bold red</option>
+      <option value="#dbadff">Purple</option>
+      <option value="#e1e1e1">Gray</option>
+    </select>
+     </div>
+    <script type="text/javascript">
+    
+    $(function()
+     {
+    $('#color').simplecolorpicker();
+    });
+    
+    </script>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

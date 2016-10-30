@@ -1,0 +1,22 @@
+<h2> Contacts </h2>
+
+<form action="/contacts" method="POST">
+  <div class="form-group">
+    <label>Email</label>
+    <input name="emailforcontact" type="text" class="form-control" placeholder="Email" value="<%= @emailforcontact %>">
+  </div>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input name="name" type="text" class="form-control" placeholder=" Your name" value="<%= @name %>">
+  </div>
+
+	<div class="form-group">
+  <textarea name="message" class="form-control" rows="3" placeholder="Type your message" value="<%= @message %>"></textarea>
+	</div>
+
+  <label>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </label>
+</form>
+
